@@ -1,0 +1,62 @@
+{
+  "files": {
+    "pdf": {
+      "bytes": 108493,
+      "matches_public": null,
+      "path": "paper.pdf",
+      "public_sha256": null,
+      "sha256": "305c7dc094953b40a24b7d4026344b8eb59023fdc1862e14829947590ddd5080"
+    },
+    "source": {
+      "bytes": 18554,
+      "matches_public": null,
+      "path": "source.archive",
+      "public_sha256": null,
+      "sha256": "63943470c0a544408236a63faca97c1229a5ed602da3e2184c16b2489fcb27a9"
+    }
+  },
+  "source_identity": "Mathesis public projection",
+  "work": {
+    "abstract_text": "Extending the right-idempotent-generated case proved by He and Tubbenhauer in 2025, we prove their Conjecture 4.2 in Tensor powers of representations of (diagram) monoids, arXiv:2508.04054v1, p. 17: a finite-dimensional representation of a finite semigroup, with every element acting singularly, has a one-dimensional zero-action direct summand in a positive tensor power, and its indecomposable-summand count is asymptotic to the tensor dimension. The proof works over every field and bounds the deficit by twice the sum of the action-rank powers. A classical multiplicity identity gives the exact maximal null summand. The same argument proves the related monoid Conjecture 3A.2 when the unit-group order is invertible in the field. A two-element right-zero example corrects the literal finite-exponent equality printed in Proposition 4.4 to an asymptotic statement. Explicit Jordan multiplicities and the recurrence of the published fusion matrix are also given.",
+    "authors": [
+      {
+        "affiliation": "ChronoAI Pte Ltd, Singapore",
+        "name": "Haobo Ma"
+      },
+      {
+        "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+        "name": "Wenlin Zhang"
+      }
+    ],
+    "concept_doi": null,
+    "current_version": 2,
+    "doi": null,
+    "lean_source": {
+      "revision": "15070fa5f71c4237050acc7ebe058958cbc04e6e",
+      "url": "https://github.com/the-omega-institute/trureturing/blob/15070fa5f71c4237050acc7ebe058958cbc04e6e/D5/S3/HomologicalAlgebra/TensorNullSummand.lean"
+    },
+    "license": "CC-BY-4.0",
+    "msc": [],
+    "pdf": {
+      "url": "/api/v1/collected-papers/he-tubbenhauer-2025-null-tensor-summand/files/pdf?version=2"
+    },
+    "previous_version": null,
+    "publication": "public",
+    "published_on": "2026-11-14T15:00:06.772900826Z",
+    "record": "he-tubbenhauer-2025-null-tensor-summand",
+    "repository_name": "he-tubbenhauer-2025-null-tensor-summand",
+    "source": {
+      "url": "/api/v1/collected-papers/he-tubbenhauer-2025-null-tensor-summand/files/source?version=2"
+    },
+    "title": "Quantitative null tensor summands for He–Tubbenhauer’s Conjecture 4.2 (arXiv:2508.04054v1, p. 17): extending their 2025 theorem",
+    "versions": [
+      {
+        "previous_version": null,
+        "published_on": "2026-11-14T15:00:06.772900826Z",
+        "revision": "2",
+        "version": 2
+      }
+    ],
+    "work": "he-tubbenhauer-2025-null-tensor-summand"
+  }
+}

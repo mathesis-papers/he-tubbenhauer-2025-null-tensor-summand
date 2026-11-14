@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this work, cite it."
+title: "Quantitative null tensor summands for He–Tubbenhauer’s Conjecture 4.2 (arXiv:2508.04054v1, p. 17): extending their 2025 theorem"
+authors:
+  - name: "Haobo Ma"
+  - name: "Wenlin Zhang"
+date-released: "2026-11-14"
+version: "2"
+url: "https://mathesis-omega-research.apps.chrono-ai.fun/papers/he-tubbenhauer-2025-null-tensor-summand?version=2"
+license: "CC-BY-4.0"

@@ -1,0 +1,12 @@
+EXAMPLE 4.3: b(0..5)=[1, 1, 29, 209, 1289, 7769]
+EXAMPLE 4.3: null multiplicity 28 at n=2; b(n)=6^n-7 checked for 2<=n<=12
+GF(2): all 1023 nonempty singular 2x2 matrix families; 3069 tensor cases n=1,2,3
+GF(2): 92 closed families, 79 without identity; all n=1 null projections exhausted
+GF(2) full family: n=5, lower bound=14, maximal null multiplicity=28
+JORDAN: 25 coordinate-chain decompositions, 2<=d<=6 and 1<=n<=5
+JORDAN: mu=d^n-2(d-1)^n+(d-2)^n; b=d^n-(d-1)^n in every case
+JORDAN: every block-size multiplicity agrees with the second rank difference
+RIGHT-ZERO: explicit GF(2) decompositions V^(tensor n)=V+Z^(2^n-2), 1<=n<=7
+RIGHT-ZERO: b(n)=2^n-1 in those seven cases; the uniform composition-ratio assertion has a written proof
+EARLIER EXAMPLE: C2+S3+zero, mu=3^n-2^n-1 and b=3^n-(2^n-(-1)^n)/3, 1<=n<=12
+ALL_CHECKS_OK

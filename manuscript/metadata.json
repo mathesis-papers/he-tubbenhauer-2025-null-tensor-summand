@@ -1,0 +1,23 @@
+{
+  "id": "he-tubbenhauer-2025-null-tensor-summand",
+  "revision": 2,
+  "problem_ids": [
+    "ht2508"
+  ],
+  "topic": "He–Tubbenhauer Conjecture 4.2 on null direct summands in singular finite-semigroup tensor powers",
+  "title": "Quantitative null tensor summands for He–Tubbenhauer’s Conjecture 4.2 (arXiv:2508.04054v1, p. 17): extending their 2025 theorem",
+  "creators": [
+    {
+      "name": "Ma, Haobo",
+      "affiliation": "ChronoAI Pte Ltd, Singapore"
+    },
+    {
+      "name": "Zhang, Wenlin",
+      "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore"
+    }
+  ],
+  "abstract": "Extending the right-idempotent-generated case proved by He and Tubbenhauer in 2025, we prove their Conjecture 4.2 in Tensor powers of representations of (diagram) monoids, arXiv:2508.04054v1, p. 17: a finite-dimensional representation of a finite semigroup, with every element acting singularly, has a one-dimensional zero-action direct summand in a positive tensor power, and its indecomposable-summand count is asymptotic to the tensor dimension. The proof works over every field and bounds the deficit by twice the sum of the action-rank powers. A classical multiplicity identity gives the exact maximal null summand. The same argument proves the related monoid Conjecture 3A.2 when the unit-group order is invertible in the field. A two-element right-zero example corrects the literal finite-exponent equality printed in Proposition 4.4 to an asymptotic statement. Explicit Jordan multiplicities and the recurrence of the published fusion matrix are also given.",
+  "summary": "The finite singular-semigroup theorem extends He–Tubbenhauer’s December 2025 restricted case using the classical null-splitting and multiplicity principles of McAlister (1971) and Juteau–Mautner–Williamson (2009). Written corollaries give the nonmodular monoid summand and count comparison, the trivial-unit-group case over every field, and the corrected asymptotic for Proposition 4.4 with a uniform-hypothesis counterexample to its finite-exponent equality. Nilpotent block multiplicities are explicit consequences of classical Jordan theory; the published Example 4.3 matrix yields b(n)=6^n−7 and null multiplicity 6^n−8 for n≥2.",
+  "license": "cc-by-4.0",
+  "evidence_url": "https://github.com/the-omega-institute/trureturing/blob/15070fa5f71c4237050acc7ebe058958cbc04e6e/D5/S3/HomologicalAlgebra/TensorNullSummand.lean"
+}
