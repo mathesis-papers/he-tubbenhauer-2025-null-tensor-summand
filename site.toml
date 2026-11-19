@@ -1,0 +1,14 @@
+[site]
+repo = "mathesis-papers/he-tubbenhauer-2025-null-tensor-summand"
+base_url = "https://papers.trureturing.org/he-tubbenhauer-2025-null-tensor-summand/"
+post_build = ["python3", "-c", "from pathlib import Path\nimport runpy\nscript = Path(\"docs/layer-mathesis/scripts/site.py\")\nif script.is_file():\n    runpy.run_path(str(script), run_name=\"__main__\")\nelse:\n    print(\"Mathesis post-build skipped: layer script is absent from repository being built\")\n"]
+languages = ["zh", "en"]
+[site.title]
+zh = "Quantitative null tensor summands for He–Tubbenhauer’s Conjecture 4.2 (arXiv:2508.04054v1, p. 17): extending their 2025 theorem"
+en = "Quantitative null tensor summands for He–Tubbenhauer’s Conjecture 4.2 (arXiv:2508.04054v1, p. 17): extending their 2025 theorem"
+[trureturing]
+repo = "the-omega-institute/trureturing"
+branch = "dev"
+[books]
+order = ["he-tubbenhauer-2025-null-tensor-summand"]
+hide = []

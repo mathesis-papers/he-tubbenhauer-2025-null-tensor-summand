@@ -1,0 +1,29 @@
+{
+  "duration": "2:29",
+  "id": "001-null-summands",
+  "lean": [
+    "D5/S3/HomologicalAlgebra/TensorNullSummand.result"
+  ],
+  "narration": {
+    "engine": "Kokoro-82M v1.0 (onnx)",
+    "language": "en",
+    "voice": "af_heart"
+  },
+  "outputs": {
+    "cover": "he-tubbenhauer-2025-null-tensor-summand_001_cover.jpg",
+    "narrated_720p": "he-tubbenhauer-2025-null-tensor-summand_001_720p_narrated.mp4"
+  },
+  "publication_basis": "pinned",
+  "released": "2026-11-14",
+  "resolution": "1280x720@30",
+  "style": "trureturing cyberpunk · deterministic canvas",
+  "subject": "https://github.com/the-omega-institute/trureturing",
+  "subtitles": [
+    "zh",
+    "en"
+  ],
+  "summary": "A nilpotent plane operation shows why being killed is weaker than splitting off. Common kernels and images explain the two-rank loss, tensor decay and the exact scope of the public Lean theorem.",
+  "summary_zh": "从平面上的幂零操作出发，区分被消掉与独立拆出，用共同核、共同像解释两份秩的代价、张量衰减与公开 Lean 定理的准确范围。",
+  "title": "From a common zero space to an independent summand",
+  "title_zh": "从共同零空间到独立直和项"
+}

@@ -1,0 +1,17 @@
+[book]
+version = "2"
+authors = ["Haobo Ma", "Wenlin Zhang"]
+license = "CC-BY-4.0"
+editions = ["zh", "en"]
+date = "2026-11-14"
+[book.title]
+zh = "Quantitative null tensor summands for He–Tubbenhauer’s Conjecture 4.2 (arXiv:2508.04054v1, p. 17): extending their 2025 theorem"
+en = "Quantitative null tensor summands for He–Tubbenhauer’s Conjecture 4.2 (arXiv:2508.04054v1, p. 17): extending their 2025 theorem"
+[outputs]
+html = true
+pdf = ["academic"]
+epub = true
+[mathesis]
+work = "he-tubbenhauer-2025-null-tensor-summand"
+version = 2
+source_title = "Quantitative null tensor summands for He–Tubbenhauer’s Conjecture 4.2 (arXiv:2508.04054v1, p. 17): extending their 2025 theorem"

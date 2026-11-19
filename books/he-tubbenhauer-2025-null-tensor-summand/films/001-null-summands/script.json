@@ -1,0 +1,187 @@
+{
+  "voice": "af_heart",
+  "speed": 0.98,
+  "say": {
+    "Lean": "Leen",
+    "Tubbenhauer": "Tooben how er"
+  },
+  "music": {
+    "bpm": 80,
+    "progression": "a-minor"
+  },
+  "scenes": [
+    {
+      "id": "chain",
+      "name": "KILLED IS NOT SPLIT",
+      "lead": 0.7,
+      "tail": 0.8,
+      "music": [
+        0.55,
+        0.15,
+        0.12,
+        0,
+        0
+      ],
+      "lines": [
+        [
+          "An operation sends the pair a, b to b, zero. It crushes a plane onto a line.",
+          "操作把数对 a、b 送到 b、零，把平面压到一条直线。"
+        ],
+        [
+          "That horizontal line is killed next, but no complementary line stays invariant. A killed direction need not split off.",
+          "横轴随后被消掉，但没有补直线保持不变。被消掉的方向未必能独立拆出。"
+        ]
+      ]
+    },
+    {
+      "id": "tensor",
+      "name": "TWO SLOTS, FOUR WORDS",
+      "lead": 0.7,
+      "tail": 0.8,
+      "music": [
+        0.55,
+        0.15,
+        0.12,
+        0,
+        0
+      ],
+      "lines": [
+        [
+          "Now give each pair of basis directions its own coordinate. This tensor square has four dimensions.",
+          "现在给每对基方向各一个坐标。张量平方有四个维度。"
+        ],
+        [
+          "Only the word one, one moves: it goes to zero, zero, then vanishes. The two mixed words split off as independent null lines.",
+          "只有基词一、一发生非零移动：它到零、零，再被消掉。两个混合基词各自拆成独立零作用直线。"
+        ]
+      ]
+    },
+    {
+      "id": "split",
+      "name": "SEPARATE KERNEL FROM IMAGE",
+      "lead": 0.7,
+      "tail": 0.8,
+      "music": [
+        0.55,
+        0.15,
+        0.12,
+        0,
+        0
+      ],
+      "lines": [
+        [
+          "For several operations, K means their common kernel: everything they all kill. I contains all their outputs.",
+          "面对多个操作，K 是共同核：所有操作都会消掉其中的向量。I 包含所有输出。"
+        ],
+        [
+          "The overlap is the obstruction. Choose L inside K away from I, then put every output in the complement U.",
+          "交集是分裂的障碍。在 K 内避开 I 选取 L，再把所有输出放进补空间 U。"
+        ],
+        [
+          "Every operation kills L and preserves U. This gives an actual invariant direct sum.",
+          "每个操作都消掉 L，并保持 U。因此得到真正的不变直和。"
+        ]
+      ]
+    },
+    {
+      "id": "budget",
+      "name": "PAY FOR THE RANKS TWICE",
+      "lead": 0.7,
+      "tail": 0.8,
+      "music": [
+        0.55,
+        0.15,
+        0.12,
+        0,
+        0
+      ],
+      "lines": [
+        [
+          "Let R be the sum of the ranks. Reaching the common kernel costs at most R dimensions.",
+          "令 R 为各操作秩之和。限制到共同核至多损失 R 个维度。"
+        ],
+        [
+          "Removing its overlap with the images costs at most another R. At least dimension minus twice R splits off with zero action.",
+          "去掉共同核与像的交集至多再损失 R 个维度。至少总维数减两倍 R 可以拆成零作用部分。"
+        ]
+      ]
+    },
+    {
+      "id": "decay",
+      "name": "TENSOR RANK DECAY",
+      "lead": 0.7,
+      "tail": 0.8,
+      "music": [
+        0.55,
+        0.15,
+        0.12,
+        0,
+        0
+      ],
+      "lines": [
+        [
+          "For a finite nonempty semigroup of singular operations, let d be dimension and r sub s each rank. Every rank is smaller than d.",
+          "对于非空有限半群的奇异作用，令 d 为维数、r 下标 s 为各秩。每个秩都小于 d。"
+        ],
+        [
+          "With n tensor slots, dimension is d to the n, but each rank is r sub s to the n. Their relative cost decays geometrically.",
+          "n 个张量位置的维数是 d 的 n 次方，每个秩却只是 r 下标 s 的 n 次方。相对代价按几何速度衰减。"
+        ],
+        [
+          "The number of indecomposable pieces, divided by dimension, tends to one. This does not mean exact equality.",
+          "不可分解块数与总维数之比趋于一。这不意味着逐点相等。"
+        ]
+      ]
+    },
+    {
+      "id": "correction",
+      "name": "ALWAYS ONE SHORT",
+      "lead": 0.7,
+      "tail": 0.8,
+      "music": [
+        0.55,
+        0.15,
+        0.12,
+        0,
+        0
+      ],
+      "lines": [
+        [
+          "Two right-zero operations give exactly two to the n minus one pieces in every positive tensor power.",
+          "两个右零操作在每个正张量幂中恰给出二的 n 次方减一个块。"
+        ],
+        [
+          "The count is always one short, yet the relative deficit tends to zero. This corrects a finite-exponent equality, while preserving the asymptotic.",
+          "计数总差一，相对亏量却趋于零。它修正有限指数等式，同时保留正确的渐近结论。"
+        ]
+      ]
+    },
+    {
+      "id": "scope",
+      "name": "WHAT THE PUBLIC LEAN THEOREM COVERS",
+      "lead": 0.7,
+      "tail": 0.8,
+      "music": [
+        0.55,
+        0.15,
+        0.12,
+        0,
+        0
+      ],
+      "lines": [
+        [
+          "He and Tubbenhauer posed the question and proved an earlier special case. Ma and Zhang extend the finite singular argument to any field.",
+          "He 与 Tubbenhauer 提出问题并已证明一个较早特例。Ma 与 Zhang 将有限奇异情形推广到任意域。"
+        ],
+        [
+          "The public Lean theorem states the qualitative case over algebraically closed fields, for finite nonempty semigroups without identity and singular actions.",
+          "公开 Lean 定理陈述代数闭域上的定性情形：半群有限、非空、无单位元，且作用都奇异。"
+        ],
+        [
+          "It supplies a null line in a positive tensor power, a count sequence, and the ratio limit for every count sequence. The full quantitative formulas have separate shared requests.",
+          "它给出正张量幂中的零作用直线、计数序列，以及每个计数序列的比值极限。完整定量公式另有共享形式化请求。"
+        ]
+      ]
+    }
+  ]
+}

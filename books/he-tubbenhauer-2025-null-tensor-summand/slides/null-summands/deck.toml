@@ -1,0 +1,12 @@
+kind = "academic"
+editions = ["zh", "en"]
+aspect = "4:3"
+structure_colour = "#0e2c8e"
+short_author = "H. Ma, W. Zhang"
+short_title = "Null tensor summands"
+date = "Paper version 2 · 14 November 2026"
+navigation_symbols = false
+
+[title]
+zh = "张量幂中的零作用直和项"
+en = "Null direct summands in tensor powers"

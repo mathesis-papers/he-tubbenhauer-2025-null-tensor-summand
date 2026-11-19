@@ -1,0 +1,252 @@
+\documentclass{beamer}
+\input{tbook-deck}
+\title{Null direct summands in tensor powers}
+\author{Haobo Ma\inst{1} \and Wenlin Zhang\inst{1,2}}
+\institute{\inst{1}ChronoAI Pte Ltd, Singapore\and\inst{2}National University of Singapore, Singapore}
+\date{14 November 2026}
+\begin{document}
+% Manuscript: title and abstract, version 2
+\begin{frame}
+\titlepage
+\note{Explain paper version 2. Haobo Ma is affiliated with ChronoAI; Wenlin Zhang with NUS and ChronoAI. Begin with a concrete operation before stating the precise scope.}
+\end{frame}
+% Manuscript: Sections 1--5
+\begin{frame}{Outline}
+\tableofcontents
+\note{Distinguish a kernel from a summand, explain the two rank losses, then quantitative decay and exact coverage. The appendix supplies length, monoids and the remaining exact examples.}
+\end{frame}
+\section{Construction}
+\subsection{From a plane to common kernels}
+% Manuscript: Section 1, motivating question
+\begin{frame}{A common zero space is not enough}
+\[
+J(a,b)=(b,0),\qquad J^2=0.
+\]
+\begin{itemize}
+\item The horizontal axis is killed by $J$.
+\item No complementary line is preserved by $J$.
+\item We need $W=L\oplus U$, both pieces invariant, with $JL=0$.
+\end{itemize}
+\begin{alertblock}{The distinction}A zero-action subspace need not be a direct summand.\end{alertblock}
+\note{Ask the audience to compute $J(0,1)$. A complementary line contains $(a,b)$ with $b\ne0$, but its image $(b,0)$ lies outside that line. Finding a kernel does not establish a splitting.}
+\end{frame}
+% Manuscript: Section 2, diagonal tensor action
+\begin{frame}{Four basis words, two singleton chains}
+\[
+J^{\otimes2}(e_1\otimes e_1)=e_0\otimes e_0\longmapsto0.
+\]
+\begin{block}{The other two basis directions}
+$e_0\otimes e_1$ and $e_1\otimes e_0$ are each killed. Their lines complement the displayed two-dimensional chain invariantly.
+\end{block}
+\[
+V^{\otimes2}\cong V\oplus Z\oplus Z,\quad \dim=4,\quad b(2)=3.
+\]
+\note{Use the semigroup $\{0,J\}$. Apply the operation to all four basis words. This is an exact example, not verification of the general theorem. A tensor square has four independent coordinates; it is not an ordinary square of a vector.}
+\end{frame}
+% Manuscript: Section 1, Lemma 1
+\begin{frame}{Put every output in the complement}
+\[
+K=\bigcap_s\ker A_s,\qquad I=\sum_s\operatorname{im}A_s.
+\]
+\begin{enumerate}
+\item Choose $L$ complementary to $K\cap I$ inside $K$.
+\item Since $L\cap I=0$, choose $W=L\oplus U$ with $I\subseteq U$.
+\item Every $A_s$ kills $L$ and sends $U$ into $I\subseteq U$.
+\end{enumerate}
+\begin{block}{Manuscript Lemma 1; written argument}
+$\mu(W)=\dim K-\dim(K\cap I)$.
+\end{block}
+\note{Explain maximality: the invariant complement of any null summand $L'$ must contain $I$. Thus $L'\cap I=0$ and $L'$ injects into $K/(K\cap I)$. Public result does not state this full maximality assertion.}
+\end{frame}
+% Manuscript: Section 1, Lemma 1 rank bound
+\begin{frame}{Why pay for the ranks twice?}
+Put $R=\sum_s\operatorname{rank}A_s$.
+\[
+\dim W-\dim K\leq R,\qquad\dim(K\cap I)\leq\dim I\leq R.
+\]
+\begin{block}{Two losses}
+First reach the common kernel; then avoid directions reached by outputs.
+\[
+\mu(W)\geq\dim W-2R.
+\]
+\end{block}
+No semigroup relations are needed for this lemma.
+\note{For the first step use $w\mapsto(A_sw)_s$, whose kernel is $K$. For the second, the dimension of a sum of images is at most the sum of their dimensions. A negative lower bound gives no positive information. The first power of $J_2$ shows that the constant $2$ cannot be decreased.}
+\end{frame}
+\section{Bounds}
+\subsection{Tensor powers and decay}
+% Manuscript: Section 2, Theorem 2
+\begin{frame}{Tensor dimension outgrows action ranks}
+\begin{block}{Manuscript Theorem 2: full hypotheses}
+$S$ finite and nonempty; $\rho$ multiplicative; $V$ finite dimensional over any field; every action singular.
+\end{block}
+\[
+d=\dim V\geq1,\quad r_s<d,\quad
+\dim V^{\otimes n}=d^n.
+\]
+\[
+\operatorname{rank}(\rho(s)^{\otimes n})=r_s^n\quad(n\geq1).
+\]
+\[
+\boxed{d^n-2\sum_sr_s^n\leq\mu(V^{\otimes n})\leq b(n)\leq d^n.}
+\]
+\note{For the rank equality factor the action through its image, then tensor the surjection and inclusion. Indecomposable decompositions exist by induction on dimension. Additivity of $\mu$ gives the middle inequality; positive dimensions give the upper bound. The complete quantitative statement follows from the paper's written proof; the later formal statement covers its restricted qualitative case.}
+\end{frame}
+% Manuscript: Section 2, error and threshold
+\begin{frame}{An explicit error and a sufficient exponent}
+\[
+0\leq1-\frac{b(n)}{d^n}\leq2\sum_s(r_s/d)^n\longrightarrow0.
+\]
+\begin{block}{When is a copy of $Z$ guaranteed?}
+It suffices that $n\geq1$ and $2\sum_sr_s^n<d^n$.
+\end{block}
+For $d\geq2$, $t=|S|$, one may take
+\[
+m=1+\left\lfloor\frac{\log(2t)}{\log(d/(d-1))}\right\rfloor.
+\]
+For $d=1$, the original space is already $Z$.
+\note{Emphasize that $m$ is sufficient, not minimal. The strict inequality forces $\mu>0$. Finiteness leaves only finitely many decaying terms; do not extend this argument to arbitrary infinite semigroups. The unique endomorphism of the zero space is invertible, so the assumptions exclude $d=0$.}
+\end{frame}
+% Manuscript: Section 4, Corollary 5
+\begin{frame}{Asymptotic equality is not pointwise equality}
+\[
+P=\begin{pmatrix}1&0\\0&0\end{pmatrix},\quad Q=\begin{pmatrix}1&1\\0&0\end{pmatrix}.
+\]
+\begin{block}{Manuscript Corollary 5; right-zero rule $st=t$}
+$V^{\otimes n}\cong V\oplus Z^{\oplus(2^n-2)}$, $n\geq1$.
+\end{block}
+\[
+b(n)=2^n-1,\qquad \frac{b(n)}{2^n}=1-2^{-n}\to1.
+\]
+Non-$Z$ indecomposables have null composition fraction at most $1/2$: the $c=3/4$ hypothesis of the original Proposition 4.4 holds, but its finite-exponent equality fails.
+\note{The exact splitting uses two independent output covectors and a common one-dimensional image. Rank normal form classifies arbitrary representations into $V,T,Z$, giving the uniform composition-fraction bound. That classification is needed to check the counterexample satisfies the original hypothesis.}
+\end{frame}
+% Manuscript: Introduction, prior literature
+\begin{frame}{What changes relative to earlier work?}
+\begin{itemize}
+\item He--Tubbenhauer posed Conjecture 4.2 in 2025 and proved the right-idempotent-generated case that year.
+\item This paper: finite singular semigroups, any field, explicit rank error.
+\item Splitting antecedents: McAlister; Juteau--Mautner--Williamson.
+\item Known root growth does not imply the ratio limit here.
+\end{itemize}
+\[
+(d^n/\sqrt n)^{1/n}\to d,\qquad (d^n/\sqrt n)/d^n\to0.
+\]
+\note{Date the earlier proof to arXiv:2512.05510v2, 19 December 2025. Do not claim the splitting principle is new or rebrand the known root-growth theorem. Attribute the quantitative extension and exact examples separately.}
+\end{frame}
+\section{Lean scope}
+\subsection{Public theorem and boundaries}
+% Manuscript: Statement and verification coverage; restricted Theorem 2
+\begin{frame}{Public Lean theorem: the exact qualitative special case}
+\begin{bookresult}{original-conjecture}
+\small
+$k$ algebraically closed; $S$ finite, nonempty, without a two-sided identity; $V$ finite dimensional; $\rho$ multiplicative, every action noninvertible. Then:
+\begin{enumerate}
+\item Some positive tensor power has a null line with invariant complement;
+\item an internal indecomposable count sequence exists for all $n\in\mathbb N$;
+\item every such sequence satisfies $b(n)/d^n\to1$.
+\end{enumerate}
+\end{bookresult}
+\note{Clauses two and three include $n=0$. The checked statement requires actual invariant complementary subspaces and counts indecomposable pieces in an internal direct sum. The quantitative formulas remain separate results.}
+\end{frame}
+% Manuscript: Statement and verification coverage
+\begin{frame}{Exact coverage and the next step}
+\begin{itemize}
+\item The complete quantitative results over arbitrary fields still await formalization.
+\item Maximal multiplicity, length, monoids and exact examples are explained from manuscript arguments.
+\item Each remaining result has a source-linked formalization task.
+\item Eight focused tasks welcome contributions to these results.
+\end{itemize}
+\begin{alertblock}{Takeaway}
+Invariant splitting and rank decay drive the proof. One Lean link does not cover a whole paper.
+\end{alertblock}
+\note{The contribution tasks correspond to eight precise manuscript results. The checked qualitative special case needs no duplicate proof. The Lean source revision is given by \PinnedCommit.}
+\end{frame}
+\appendix
+\section{Examples}
+\subsection{Exact examples and sources}
+% Manuscript: Section 2, Corollary 3
+\begin{frame}{Composition length: another squeeze}
+\[
+\mu\leq c_Z(n)\leq\ell(n)\leq d^n,\qquad b(n)\leq\ell(n).
+\]
+\begin{block}{Manuscript Corollary 3}
+All three dimension-normalized quantities tend to $1$, with deficit at most $E(n)=2\sum_s(r_s/d)^n$.
+\end{block}
+A two-dimensional chain can have two null composition factors and no null direct summand.
+\note{Finite dimension gives composition series. Null direct summands contribute composition factors, and every nonzero block contributes at least one factor. The original Proposition 4.1 already gives the length asymptotic; the added rank error does not cover its L-class bound.}
+\end{frame}
+% Manuscript: Section 3, Corollary 4
+\begin{frame}{Monoids: preserve the unit-group symmetry}
+\small
+$M$ finite, $G=M^\times$, $V\ne0$ unital; only $1$ acts identically, $|G|\in k^\times$. Put $S=M\setminus G$.
+\[
+V^{\otimes n}=L_n\oplus U_n,\quad SL_n=0,\quad
+\dim U_n\leq2\sum_{s\in S}r_s^n.
+\]
+\[
+0\leq b_G(n)-b_M(n)\leq2\sum_{s\in S}r_s^n,\quad b_M(n)/b_G(n)\to1.
+\]
+\begin{block}{Mechanism and boundary}
+Maschke supplies $G$-invariant complements. Modular characteristic with nontrivial $G$ is outside scope.
+\end{block}
+\note{An invertible nonunit action would make a positive idempotent power act identically, forcing that power to be 1, a contradiction. If S is empty, take the whole space as L. Simple group-module dimensions are at most the group order, so $b_G(n)\geq d^n/|G|$. A trivial G allows every field.}
+\end{frame}
+% Manuscript: Section 5, Corollary 6
+\begin{frame}{Group-union example: count mixed words}
+$S=C_2\cup S_3\cup\{0\}$, $V=X\oplus Y$, $\dim X=1$, $\dim Y=2$, over $\mathbb C$.
+\[
+\mu=3^n-2^n-1,\qquad b(n)=3^n-\frac{2^n-(-1)^n}{3}.
+\]
+\begin{itemize}
+\item All mixed words are null; pure words have no null summands.
+\item Standard $S_3$ character $(2,0,-1)$; sum of irreducible characters $(4,0,1)$.
+\item Weighted inner product gives $b_{S_3}(n)=(2^{n+1}+(-1)^n)/3$.
+\end{itemize}
+\note{The example is He--Tubbenhauer's arXiv:2502.02849v1 Example 2.2, v2 Example 1. X is the nontrivial one-dimensional C2 module, Y the standard S3 module. Mixed-word dimension is total dimension minus the two pure-word dimensions.}
+\end{frame}
+% Manuscript: Section 5, Proposition 7
+\begin{frame}{Count chains by rank differences}
+$d\geq2,n\geq1$, $B=J_d^{\otimes n}$.
+\[
+\operatorname{rank}B^q=\max(d-q,0)^n.
+\]
+\[
+b(n)=d^n-(d-1)^n,\quad \mu=d^n-2(d-1)^n+(d-2)^n.
+\]
+\[
+m_j(n)=(d-j+1)^n-2(d-j)^n+\max(d-j-1,0)^n.
+\]
+$1\leq j\leq d$; singleton chains are null summands.
+\note{The action lowers every basis coordinate together. Finite chains are indecomposable since $k[x]/(x^h)$ has only trivial idempotents. The second rank difference contributes one exactly for size-j blocks. Brualdi gave two-factor decompositions in 1985; the public Jordan-chain rank theorem is a related ingredient, not these complete formulas.}
+\end{frame}
+% Manuscript: Section 5, Corollary 8
+\begin{frame}{Published fusion matrix: induction suffices}
+\[
+A=\begin{pmatrix}0&0&0&0\\1&0&0&0\\0&28&6&40\\0&1&0&1\end{pmatrix},\quad v_0=(1,0,0,0)^T.
+\]
+\[
+v_{n+1}=Av_n,\quad v_2=(0,0,28,1)^T.
+\]
+\[
+v_n=(0,0,6^n-8,1)^T\quad(n\geq2).
+\]
+Third vertex: $Z$. Total count $6^n-7$; null count $6^n-8$.
+\note{Source: He--Tubbenhauer, arXiv:2508.04054v1, p. 17, Example 4.3 and Figure 9. Vertex dimensions are $(1,6,1,8)$. Use $6(6^n-8)+40=6^{n+1}-8$. This is an exact calculation for the supplied matrix, with n>=2, not n>=1.}
+\end{frame}
+% Manuscript: Bibliography and contribution route
+\begin{frame}{Selected sources and shared tasks}
+\footnotesize
+\begin{itemize}
+\item He--Tubbenhauer: \href{https://arxiv.org/abs/2508.04054v1}{arXiv:2508.04054v1}, Conjectures 4.2, 3A.2; Proposition 4.4.
+\item Same authors: \href{https://arxiv.org/abs/2512.05510v2}{arXiv:2512.05510v2}, Theorem 4A.14(e)--(f).
+\item McAlister (1971); Juteau--Mautner--Williamson (2009/2014); Brualdi (1985).
+\item Paper: Haobo Ma, Wenlin Zhang; version 2; CC BY 4.0.
+\item \href{https://github.com/the-omega-institute/trureturing-requests/issues/45}{Quantitative tensor-bound request}; the book links the other shared scopes.
+\end{itemize}
+Publication basis: \PinnedCommit.
+\note{The book gives the complete references and precise source locations. The shared contribution tasks connect the remaining results to their original arguments and literature.}
+\end{frame}
+% Manuscript: statement and verification coverage (generated ledger)
+\FormalVerification
+\end{document}

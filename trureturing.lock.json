@@ -1,0 +1,17 @@
+{
+  "schema": "trureturing-books.lock.v1",
+  "repo": "the-omega-institute/trureturing",
+  "branch": "dev",
+  "commit": "15070fa5f71c4237050acc7ebe058958cbc04e6e",
+  "pinned_at": "2026-11-14T23:52:59Z",
+  "declarations": {
+    "D5/S3/HomologicalAlgebra/TensorNullSummand.result": {
+      "module": "D5/S3/HomologicalAlgebra/TensorNullSummand",
+      "name": "D5.S3.HomologicalAlgebra.TensorNullSummand.result",
+      "kind": "theorem",
+      "statement_id": "sha256:ecec2a2d66fff8a572ca0b9ece53abc8d9198170810007df088f9d0391641c02",
+      "line": 575,
+      "signature": "theorem result : claim"
+    }
+  }
+}

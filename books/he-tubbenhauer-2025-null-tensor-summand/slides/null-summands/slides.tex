@@ -1,0 +1,252 @@
+\documentclass{beamer}
+\input{tbook-deck}
+\title{张量幂中的零作用直和项}
+\author{Haobo Ma\inst{1} \and Wenlin Zhang\inst{1,2}}
+\institute{\inst{1}ChronoAI Pte Ltd, Singapore\and\inst{2}National University of Singapore, Singapore}
+\date{14 November 2026}
+\begin{document}
+% Manuscript: title and abstract, version 2
+\begin{frame}
+\titlepage
+\note{讲解原论文版本 2。Haobo Ma 仅隶属 ChronoAI；Wenlin Zhang 同时隶属 NUS 与 ChronoAI。先从具体操作讲起，再给精确范围。}
+\end{frame}
+% Manuscript: Sections 1--5
+\begin{frame}{路线}
+\tableofcontents
+\note{先区分核与直和项，再解释两份秩的代价、定量衰减与准确覆盖。附录放组成长度、幺半群与其余准确例子。}
+\end{frame}
+\section{问题与构造}
+\subsection{从二维例子到共同核}
+% Manuscript: Section 1, motivating question
+\begin{frame}{共同零空间还不够}
+\[
+J(a,b)=(b,0),\qquad J^2=0.
+\]
+\begin{itemize}
+\item 横轴被 $J$ 消掉。
+\item 但任何补直线都不被 $J$ 保持。
+\item 寻找的是 $W=L\oplus U$，两部分都不变，且 $J L=0$。
+\end{itemize}
+\begin{alertblock}{关键区别}零作用子空间不一定是零作用直和项。\end{alertblock}
+\note{先让听众算一次 $J(0,1)$。若补直线含有 $(a,b)$ 且 $b\ne0$，它的像 $(b,0)$ 不在那条直线上。不能只找到核就宣布分裂。}
+\end{frame}
+% Manuscript: Section 2, diagonal tensor action
+\begin{frame}{四个基词，两条单点链}
+\[
+J^{\otimes2}(e_1\otimes e_1)=e_0\otimes e_0\longmapsto0.
+\]
+\begin{block}{另外两个基方向}
+$e_0\otimes e_1$ 与 $e_1\otimes e_0$ 各自被消掉，且与上面的二维链作不变直和。
+\end{block}
+\[
+V^{\otimes2}\cong V\oplus Z\oplus Z,\quad \dim=4,\quad b(2)=3.
+\]
+\note{这里使用半群 $\{0,J\}$。逐个作用于四个基词；这个准确计算是例子，不是一般定理的验证。张量平方有四个独立坐标，不是普通的向量平方。}
+\end{frame}
+% Manuscript: Section 1, Lemma 1
+\begin{frame}{把所有输出放进补空间}
+\[
+K=\bigcap_s\ker A_s,\qquad I=\sum_s\operatorname{im}A_s.
+\]
+\begin{enumerate}
+\item 在 $K$ 中取 $K\cap I$ 的补空间 $L$。
+\item 因 $L\cap I=0$，选择 $W=L\oplus U$ 且 $I\subseteq U$。
+\item 每个 $A_s$ 消掉 $L$，把 $U$ 送进 $I\subseteq U$。
+\end{enumerate}
+\begin{block}{原论文引理 1；书面论证}
+$\mu(W)=\dim K-\dim(K\cap I)$。
+\end{block}
+\note{解释最大性：任意零作用直和项 $L'$ 的不变补空间必须包含 $I$，故 $L'\cap I=0$，从而 $L'$ 单射到 $K/(K\cap I)$。这个最大性未由公开 result 完整陈述。}
+\end{frame}
+% Manuscript: Section 1, Lemma 1 rank bound
+\begin{frame}{为何付出两份秩？}
+令 $R=\sum_s\operatorname{rank}A_s$。
+\[
+\dim W-\dim K\leq R,\qquad\dim(K\cap I)\leq\dim I\leq R.
+\]
+\begin{block}{两步损失}
+先限制到共同核，再避开其中可被输出到的方向。
+\[
+\mu(W)\geq\dim W-2R.
+\]
+\end{block}
+该引理不要求操作满足半群关系。
+\note{第一步用映射 $w\mapsto(A_sw)_s$，其核为 $K$。第二步用像空间和的维数不超过维数之和。下界为负时只是没有正信息。常数 $2$ 在 $J_2$ 的一次幂例子中不能减小。}
+\end{frame}
+\section{定量结论}
+\subsection{张量与衰减}
+% Manuscript: Section 2, Theorem 2
+\begin{frame}{张量维数比作用秩增长更快}
+\begin{block}{原论文定理 2：完整假设}
+$S$ 非空有限；$\rho$ 乘法；$V$ 在任意域上有限维；每个作用奇异。
+\end{block}
+\[
+d=\dim V\geq1,\quad r_s<d,\quad
+\dim V^{\otimes n}=d^n.
+\]
+\[
+\operatorname{rank}(\rho(s)^{\otimes n})=r_s^n\quad(n\geq1).
+\]
+\[
+\boxed{d^n-2\sum_sr_s^n\leq\mu(V^{\otimes n})\leq b(n)\leq d^n.}
+\]
+\note{秩等式：把作用分解为到像的满射和像的嵌入，再张量化。不可分解分解由维数归纳存在。$\mu$ 可加给中间界，每个非零块至少一维给上界。完整定量结论由论文的书面证明给出；后面形式化陈述覆盖的是受限的定性情形。}
+\end{frame}
+% Manuscript: Section 2, error and threshold
+\begin{frame}{显式误差与一个充分指数}
+\[
+0\leq1-\frac{b(n)}{d^n}\leq2\sum_s(r_s/d)^n\longrightarrow0.
+\]
+\begin{block}{什么时候一定出现 $Z$？}
+$n\geq1$ 且 $2\sum_sr_s^n<d^n$ 即可。
+\end{block}
+若 $d\geq2$、$t=|S|$，可取
+\[
+m=1+\left\lfloor\frac{\log(2t)}{\log(d/(d-1))}\right\rfloor.
+\]
+若 $d=1$，原空间已经是 $Z$。
+\note{强调 $m$ 是充分指数，不是最小指数。严格不等式保证 $\mu>0$。有限性保证衰减项只有有限多个；本报告不将证明推广到无限半群。零空间唯一自映射可逆，因此假设已排除 $d=0$。}
+\end{frame}
+% Manuscript: Section 4, Corollary 5
+\begin{frame}{渐近相等不等于逐点相等}
+\[
+P=\begin{pmatrix}1&0\\0&0\end{pmatrix},\quad Q=\begin{pmatrix}1&1\\0&0\end{pmatrix}.
+\]
+\begin{block}{原论文推论 5；右零半群 $st=t$}
+$V^{\otimes n}\cong V\oplus Z^{\oplus(2^n-2)}$，$n\geq1$。
+\end{block}
+\[
+b(n)=2^n-1,\qquad \frac{b(n)}{2^n}=1-2^{-n}\to1.
+\]
+非 $Z$ 不可分解块的零作用组成比例至多 $1/2$；满足原命题 4.4 的 $c=3/4$ 假设，但有限指数等式失败。
+\note{准确分解来自两个独立输出协向量与一维共同像。任意表示化为共享像上的秩标准形，分类为 $V,T,Z$，故组成比例有一致界。这个分类是检验反例满足原假设的必要步骤。}
+\end{frame}
+% Manuscript: Introduction, prior literature
+\begin{frame}{贡献相对于哪些已有结果？}
+\begin{itemize}
+\item He--Tubbenhauer：2025 年提出猜想 4.2；同年已证明右幂等元生成情形。
+\item 本论文：有限奇异半群，任意域，显式秩误差。
+\item 分裂原理：McAlister；Juteau--Mautner--Williamson。
+\item 根增长率已知，但不推出这里的比值极限。
+\end{itemize}
+\[
+(d^n/\sqrt n)^{1/n}\to d,\qquad (d^n/\sqrt n)/d^n\to0.
+\]
+\note{首次已有证明的日期按 arXiv:2512.05510v2，2025 年 12 月 19 日。不是首次发现共同核分裂，也不是把已知根增长率重述成新结果。定量推广与准确例子各自说明来源。}
+\end{frame}
+\section{证据范围}
+\subsection{公开定理与边界}
+% Manuscript: Statement and verification coverage; restricted Theorem 2
+\begin{frame}{公开 Lean 定理：精确的定性特例}
+\begin{bookresult}{original-conjecture}
+\small
+$k$ 代数闭，$S$ 非空有限且无双边单位元，$V$ 有限维，$\rho$ 乘法且每个作用不可逆。则：
+\begin{enumerate}
+\item 某个正张量幂有 $Z$ 直和项及不变补空间；
+\item 存在所有 $n\in\mathbb N$ 的内部不可分解计数序列；
+\item 每个这样的序列都满足 $b(n)/d^n\to1$。
+\end{enumerate}
+\end{bookresult}
+\note{第二、三条含 $n=0$。已检查的陈述要求实际不变互补子空间，并对内部直和中的不可分解块逐个计数。完整定量公式是另外的结论。}
+\end{frame}
+% Manuscript: Statement and verification coverage
+\begin{frame}{精确覆盖与下一步}
+\begin{itemize}
+\item 任意域上的完整定量结论仍等待形式化。
+\item 最大重数、组成长度、幺半群及准确例子：按论文书面论证解释。
+\item 每条待完成的结论都有对应原文的形式化任务。
+\item 八项明确的贡献任务欢迎大家参与。
+\end{itemize}
+\begin{alertblock}{结论}
+证明靠不变分裂与秩衰减；一个 Lean 链接不代表整篇论文全部覆盖。
+\end{alertblock}
+\note{贡献任务对应八项具体的论文结论；已检查的定性特例不需要重复证明。Lean 源码版本由 \PinnedCommit 给出。}
+\end{frame}
+\appendix
+\section{技术补充}
+\subsection{准确例子与来源}
+% Manuscript: Section 2, Corollary 3
+\begin{frame}{组成长度：另一个夹逼}
+\[
+\mu\leq c_Z(n)\leq\ell(n)\leq d^n,\qquad b(n)\leq\ell(n).
+\]
+\begin{block}{原论文推论 3}
+上述三个维数归一化量都趋于 $1$，亏量至多 $E(n)=2\sum_s(r_s/d)^n$。
+\end{block}
+二维链可有两个零作用组成因子，却没有零作用直和项。
+\note{有限维保证组成列存在。零作用直和项贡献组成因子；非零块至少有一个因子。组成长度渐近式已见原命题 4.1，此处增加秩误差，不包含其 L 类估计。}
+\end{frame}
+% Manuscript: Section 3, Corollary 4
+\begin{frame}{幺半群：保留单位群的对称性}
+\small
+$M$ 有限，$G=M^\times$，$V\ne0$ 保单位；仅 $1$ 作用为恒等，$|G|\in k^\times$。令 $S=M\setminus G$。
+\[
+V^{\otimes n}=L_n\oplus U_n,\quad SL_n=0,\quad
+\dim U_n\leq2\sum_{s\in S}r_s^n.
+\]
+\[
+0\leq b_G(n)-b_M(n)\leq2\sum_{s\in S}r_s^n,\quad b_M(n)/b_G(n)\to1.
+\]
+\begin{block}{机制与边界}
+Maschke 给 $G$-不变补空间；非平凡 $G$ 的模特征情形不在范围内。
+\end{block}
+\note{非单位元作用可逆会使某个正幂幂等元作用为恒等；假设迫使该幂为 1，矛盾。S 为空时取整个空间为 L。每个简单群模维数至多群阶，给出 $b_G(n)\geq d^n/|G|$。G 平凡时任意域均可。}
+\end{frame}
+% Manuscript: Section 5, Corollary 6
+\begin{frame}{群并例子：数混合词}
+$S=C_2\cup S_3\cup\{0\}$，$V=X\oplus Y$，$\dim X=1$、$\dim Y=2$，域为 $\mathbb C$。
+\[
+\mu=3^n-2^n-1,\qquad b(n)=3^n-\frac{2^n-(-1)^n}{3}.
+\]
+\begin{itemize}
+\item 混合词全部零作用；纯词无零作用项。
+\item $S_3$ 标准特征标 $(2,0,-1)$，不可约特征标之和 $(4,0,1)$。
+\item 加权内积给 $b_{S_3}(n)=(2^{n+1}+(-1)^n)/3$。
+\end{itemize}
+\note{出处为 He--Tubbenhauer arXiv:2502.02849v1 例 2.2，v2 例 1。X 是非平凡一维 C2 模，Y 是标准 S3 模。混合词维数为总维数减两类纯词维数。}
+\end{frame}
+% Manuscript: Section 5, Proposition 7
+\begin{frame}{链数来自秩的一阶与二阶差分}
+$d\geq2,n\geq1$，$B=J_d^{\otimes n}$。
+\[
+\operatorname{rank}B^q=\max(d-q,0)^n.
+\]
+\[
+b(n)=d^n-(d-1)^n,\quad \mu=d^n-2(d-1)^n+(d-2)^n.
+\]
+\[
+m_j(n)=(d-j+1)^n-2(d-j)^n+\max(d-j-1,0)^n.
+\]
+$1\leq j\leq d$；单点链就是零作用直和项。
+\note{每次作用把所有基坐标同时下移。有限链不可分解，因为交换子环 $k[x]/(x^h)$ 只有平凡幂等元。二阶秩差对大小恰为 j 的块贡献一，其余零。Brualdi 1985 已给二因子分解；公开 Jordan 链秩定理是相关工具，非这些完整公式。}
+\end{frame}
+% Manuscript: Section 5, Corollary 8
+\begin{frame}{已发表融合矩阵：归纳就够了}
+\[
+A=\begin{pmatrix}0&0&0&0\\1&0&0&0\\0&28&6&40\\0&1&0&1\end{pmatrix},\quad v_0=(1,0,0,0)^T.
+\]
+\[
+v_{n+1}=Av_n,\quad v_2=(0,0,28,1)^T.
+\]
+\[
+v_n=(0,0,6^n-8,1)^T\quad(n\geq2).
+\]
+第三顶点为 $Z$；总块数 $6^n-7$，零作用块数 $6^n-8$。
+\note{He--Tubbenhauer arXiv:2508.04054v1，第 17 页例 4.3 与图 9。顶点维数为 $(1,6,1,8)$。递推使用 $6(6^n-8)+40=6^{n+1}-8$。这只是给定矩阵的准确计算，不将 n>=2 改为 n>=1。}
+\end{frame}
+% Manuscript: Bibliography and contribution route
+\begin{frame}{主要来源与共享任务}
+\footnotesize
+\begin{itemize}
+\item He--Tubbenhauer：\href{https://arxiv.org/abs/2508.04054v1}{arXiv:2508.04054v1}，猜想 4.2、3A.2，命题 4.4。
+\item 同作者：\href{https://arxiv.org/abs/2512.05510v2}{arXiv:2512.05510v2}，定理 4A.14(e)--(f)。
+\item McAlister (1971)；Juteau--Mautner--Williamson (2009/2014)；Brualdi (1985)。
+\item 原论文：Haobo Ma、Wenlin Zhang，版本 2，CC BY 4.0。
+\item \href{https://github.com/the-omega-institute/trureturing-requests/issues/45}{定量张量界请求}；其余范围见书中同一共享请求表。
+\end{itemize}
+当前依据：\PinnedCommit。
+\note{书中列出完整文献和准确的原文定位。共享贡献任务将待完成的形式化与原论文论证和相关文献联系起来。}
+\end{frame}
+% Manuscript: statement and verification coverage (generated ledger)
+\FormalVerification
+\end{document}

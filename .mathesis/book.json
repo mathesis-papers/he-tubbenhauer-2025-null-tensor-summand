@@ -1,0 +1,110 @@
+{
+  "book": "he-tubbenhauer-2025-null-tensor-summand",
+  "pending_claims": [],
+  "results": {
+    "null-multiplicity": {
+      "claim": "collected:he-tubbenhauer-2025-null-tensor-summand:2:s1",
+      "gids": [],
+      "comparison_verdict": "none",
+      "compared_public_gid": null,
+      "comparison_commit": "15070fa5f71c4237050acc7ebe058958cbc04e6e",
+      "formalization_request": {
+        "label": "Maximal null multiplicity and rank bound",
+        "url": "https://github.com/the-omega-institute/trureturing-requests/issues/44"
+      }
+    },
+    "tensor-bound": {
+      "claim": "collected:he-tubbenhauer-2025-null-tensor-summand:2:s2",
+      "gids": [],
+      "comparison_verdict": "special case",
+      "compared_public_gid": "D5/S3/HomologicalAlgebra/TensorNullSummand.result",
+      "comparison_commit": "15070fa5f71c4237050acc7ebe058958cbc04e6e",
+      "formalization_request": {
+        "label": "Quantitative singular tensor summand bounds over any field",
+        "url": "https://github.com/the-omega-institute/trureturing-requests/issues/45"
+      }
+    },
+    "composition-length": {
+      "claim": "collected:he-tubbenhauer-2025-null-tensor-summand:2:s3",
+      "gids": [],
+      "comparison_verdict": "none",
+      "compared_public_gid": null,
+      "comparison_commit": "15070fa5f71c4237050acc7ebe058958cbc04e6e",
+      "formalization_request": {
+        "label": "Composition multiplicities with rank deficit",
+        "url": "https://github.com/the-omega-institute/trureturing-requests/issues/46"
+      }
+    },
+    "monoid-comparison": {
+      "claim": "collected:he-tubbenhauer-2025-null-tensor-summand:2:s4",
+      "gids": [],
+      "comparison_verdict": "none",
+      "compared_public_gid": null,
+      "comparison_commit": "15070fa5f71c4237050acc7ebe058958cbc04e6e",
+      "formalization_request": {
+        "label": "Nonmodular monoid splitting and unit-group count comparison",
+        "url": "https://github.com/the-omega-institute/trureturing-requests/issues/47"
+      }
+    },
+    "right-zero": {
+      "claim": "collected:he-tubbenhauer-2025-null-tensor-summand:2:s5",
+      "gids": [],
+      "comparison_verdict": "none",
+      "compared_public_gid": null,
+      "comparison_commit": "15070fa5f71c4237050acc7ebe058958cbc04e6e",
+      "formalization_request": {
+        "label": "Right-zero tensor decomposition and finite-exponent correction",
+        "url": "https://github.com/the-omega-institute/trureturing-requests/issues/48"
+      }
+    },
+    "group-union": {
+      "claim": "collected:he-tubbenhauer-2025-null-tensor-summand:2:s6",
+      "gids": [],
+      "comparison_verdict": "none",
+      "compared_public_gid": null,
+      "comparison_commit": "15070fa5f71c4237050acc7ebe058958cbc04e6e",
+      "formalization_request": {
+        "label": "Exact counts for the C2 union S3 zero semigroup",
+        "url": "https://github.com/the-omega-institute/trureturing-requests/issues/49"
+      }
+    },
+    "jordan-counts": {
+      "claim": "collected:he-tubbenhauer-2025-null-tensor-summand:2:s7",
+      "gids": [],
+      "comparison_verdict": "variant",
+      "compared_public_gid": "D5/S1/Eigenstructure/NilpotentJordanChains.nilpotent_jordan_chains_rank",
+      "comparison_commit": "15070fa5f71c4237050acc7ebe058958cbc04e6e",
+      "formalization_request": {
+        "label": "Explicit nilpotent tensor Jordan multiplicities",
+        "url": "https://github.com/the-omega-institute/trureturing-requests/issues/50"
+      }
+    },
+    "fusion-counts": {
+      "claim": "collected:he-tubbenhauer-2025-null-tensor-summand:2:s8",
+      "gids": [],
+      "comparison_verdict": "none",
+      "compared_public_gid": null,
+      "comparison_commit": "15070fa5f71c4237050acc7ebe058958cbc04e6e",
+      "formalization_request": {
+        "label": "Exact recurrence for the published six-dimensional fusion example",
+        "url": "https://github.com/the-omega-institute/trureturing-requests/issues/51"
+      }
+    },
+    "original-conjecture": {
+      "claim": "collected:he-tubbenhauer-2025-null-tensor-summand:2:s2",
+      "gids": [
+        "D5/S3/HomologicalAlgebra/TensorNullSummand.result"
+      ],
+      "comparison_verdict": "same",
+      "compared_public_gid": "D5/S3/HomologicalAlgebra/TensorNullSummand.result",
+      "comparison_commit": "15070fa5f71c4237050acc7ebe058958cbc04e6e"
+    }
+  },
+  "stage": "complete",
+  "titles": {
+    "en": "Quantitative null tensor summands for He–Tubbenhauer’s Conjecture 4.2 (arXiv:2508.04054v1, p. 17): extending their 2025 theorem",
+    "zh": "Quantitative null tensor summands for He–Tubbenhauer’s Conjecture 4.2 (arXiv:2508.04054v1, p. 17): extending their 2025 theorem"
+  },
+  "version": 2,
+  "work": "he-tubbenhauer-2025-null-tensor-summand"
+}
