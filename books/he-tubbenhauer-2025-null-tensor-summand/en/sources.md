@@ -52,8 +52,10 @@ The paper leaves extensions to infinite semigroups, modular characteristic with 
 
 Choose a result in the table and join its linked request to coordinate a formalization. The [contribution guide](https://github.com/the-omega-institute/trureturing/blob/dev/docs/CONTRIBUTING.md) explains how to submit a proof. Each completed contribution should identify the precise statement it proves, alongside credit for the original mathematics and the formalization.
 
-<style>pre:has(> code[class*="typst"]) { display: none; }</style>
+<section hidden="hidden">
 
 ```{=typst}
 #pagebreak()
 ```
+
+</section>

@@ -52,8 +52,10 @@
 
 可以在上表选择一个结果，通过对应请求加入形式化工作并协调范围。[贡献指南](https://github.com/the-omega-institute/trureturing/blob/dev/docs/CONTRIBUTING.md)说明如何提交证明。每项完成的贡献都应指明所证明的准确陈述，并分别保留原数学成果与形式化工作的署名。
 
-<style>pre:has(> code[class*="typst"]) { display: none; }</style>
+<section hidden="hidden">
 
 ```{=typst}
 #pagebreak()
 ```
+
+</section>
