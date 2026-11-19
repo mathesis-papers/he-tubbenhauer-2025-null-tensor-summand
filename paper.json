@@ -2,16 +2,16 @@
   "files": {
     "pdf": {
       "bytes": 108493,
-      "matches_public": null,
+      "matches_public": true,
       "path": "paper.pdf",
-      "public_sha256": null,
+      "public_sha256": "305c7dc094953b40a24b7d4026344b8eb59023fdc1862e14829947590ddd5080",
       "sha256": "305c7dc094953b40a24b7d4026344b8eb59023fdc1862e14829947590ddd5080"
     },
     "source": {
       "bytes": 18554,
-      "matches_public": null,
+      "matches_public": true,
       "path": "source.archive",
-      "public_sha256": null,
+      "public_sha256": "63943470c0a544408236a63faca97c1229a5ed602da3e2184c16b2489fcb27a9",
       "sha256": "63943470c0a544408236a63faca97c1229a5ed602da3e2184c16b2489fcb27a9"
     }
   },
@@ -38,6 +38,8 @@
     "license": "CC-BY-4.0",
     "msc": [],
     "pdf": {
+      "bytes": 108493,
+      "sha256": "305c7dc094953b40a24b7d4026344b8eb59023fdc1862e14829947590ddd5080",
       "url": "/api/v1/collected-papers/he-tubbenhauer-2025-null-tensor-summand/files/pdf?version=2"
     },
     "previous_version": null,
@@ -46,6 +48,8 @@
     "record": "he-tubbenhauer-2025-null-tensor-summand",
     "repository_name": "he-tubbenhauer-2025-null-tensor-summand",
     "source": {
+      "bytes": 18554,
+      "sha256": "63943470c0a544408236a63faca97c1229a5ed602da3e2184c16b2489fcb27a9",
       "url": "/api/v1/collected-papers/he-tubbenhauer-2025-null-tensor-summand/files/source?version=2"
     },
     "title": "Quantitative null tensor summands for He–Tubbenhauer’s Conjecture 4.2 (arXiv:2508.04054v1, p. 17): extending their 2025 theorem",
